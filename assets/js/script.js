@@ -6,38 +6,31 @@ $( document ).ready(function() {
 
     console.log('ready');
 	$(".main-img").each(function() {
-			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1' + '.jpg' + ')');
+			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	});
 
 
 
-
-    count = 1;
-
+	count = 0;
     	$(".main-img").on('click', function() {
+    		
     		count++;
+    		var displayImage = $(this).parent('div').attr('id');
 
+    		$(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
+    		 
+
+			$.get('assets/img/' + displayImage + '/img' + count + '.jpg')
+			.success(function(d){
+			    console.log('yay');// video not removed: set thumbnail
+			    //div.css("background-image","url('http://img.youtube.com/vi/" + videoId + "/0.jpg')");   
+			})
+			.error(function(d){
+			    count = 1;// video removed: set your own thumbnail
+			});
 
     		//if (count < 5) {
-    		
-    		    var displayImage = $(this).parent('div').attr('id');
-        $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
-
-   //      	$.get('assets/img/' + displayImage + '/img' + count + '.jpg')
-			// .success(function(d){
-			//     // video not removed: set thumbnail
-			//     console.log('yay');
-			// })
-			// .error(function(d){
-			//     // video removed: set your own thumbnail
-			//     console.log('error');
-			// });
-   //      	$('<img/>').attr('src', 'assets/img/' + displayImage + '/img' + count + '.jpg').off('load', function() {
-   // 					//$(this).remove(); // prevent memory leaks as @benweet suggested
-   // 					//$('body').css('background-image', 'url(http://picture.de/image.png)');
-   // 					//$(".main-img").addClass('has-image');
-   // 					console.log('help');
-			// });
+          
 
     // } else {
     // 	count = 0;
@@ -45,6 +38,31 @@ $( document ).ready(function() {
 });
 
 
+	//currentCount = 
+//     count = 1;
+
+//     	$(".main-img").on('click', function() {
+//     		 count++;
+//     		 var displayImage = $(this).parent('div').attr('id');
+
+
+
+//     		//if (count < 5) {
+//             $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
+
+//     // } else {
+//     // 	count = 0;
+//     // }
+// });
+
+// $.get('http://img.youtube.com/vi/' + videoId + '/0.jpg')
+// .success(function(d){
+//     // video not removed: set thumbnail
+//     div.css("background-image","url('http://img.youtube.com/vi/" + videoId + "/0.jpg')");   
+// })
+// .error(function(d){
+//     // video removed: set your own thumbnail
+// });
 
 
 });
