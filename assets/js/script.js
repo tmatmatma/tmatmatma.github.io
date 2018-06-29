@@ -41,32 +41,32 @@ $( document ).ready(function() {
 
 
 
-    		//if (count < 5) {
+    		if (count < 5) {
     		
     		    var displayImage = $(this).parent('div').attr('id');
 
-$.ajax({
-    url:'assets/img/' + displayImage + '/img' + count + '.jpg',
-    type:'HEAD',
-    error: function()
-    {
-        count = 1;
-    },
-    success: function()
-    {
-        count++;
-        $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
-    }
-});
+// $.ajax({
+//     url:'assets/img/' + displayImage + '/img' + count + '.jpg',
+//     type:'HEAD',
+//     error: function()
+//     {
+//         count = 1;
+//     },
+//     success: function()
+//     {
+//         count++;
+//         $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
+//     }
+// });
 
 
 
-    		    // $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
+    		     $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
     	
 
-    		   // } else {
-    		   // 	count = 0;
-    		   // }
+    		    } else {
+    		   	count = 0;
+    		   }
 
 
     		   //  var numofImgs =  $.ajax({
