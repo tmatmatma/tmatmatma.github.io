@@ -26,7 +26,7 @@ $( document ).ready(function() {
 			    //div.css("background-image","url('http://img.youtube.com/vi/" + videoId + "/0.jpg')");   
 			})
 			.error(function(d){
-			    count = 1;// video removed: set your own thumbnail
+			    count = 0;// video removed: set your own thumbnail
 			});
 
     		//if (count < 5) {
