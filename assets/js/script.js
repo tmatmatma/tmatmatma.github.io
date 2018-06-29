@@ -11,7 +11,7 @@ $( document ).ready(function() {
 					// console.log(increment_last);
 
 
-    console.log('okay');
+    console.log('good');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -44,14 +44,13 @@ $(".main-img").on('click', function() {
 
 
 	
-	$(this).css('background-image', str);
+	//$(this).css('background-image', str);
 
 			$.get(str)
 			.success(function(d){
-			    console.log('yay');
+			    $(this).css('background-image', str);
 			})
 			.error(function(d){
-			    //count = 1;
 			    $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
 			});
 
