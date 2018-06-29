@@ -27,7 +27,7 @@ $( document ).ready(function() {
 			})
 			.error(function(d){
 			    count = 0;
-			    $(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
+			    $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
 			});
 
     		//if (count < 5) {
