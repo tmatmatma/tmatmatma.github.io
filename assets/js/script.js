@@ -11,7 +11,8 @@ $( document ).ready(function() {
 					// console.log(increment_last);
 
 
-    console.log('ben');
+
+    console.log('rad');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -21,30 +22,12 @@ $( document ).ready(function() {
 
 
 
-
-
-	//count = 1;
-$(".main-img").on('click', function() {
-	var displayImage = $(this).parent('div').attr('id');
-
-	var str = $(this).css('background-image');
-
-	str = str.replace(/[0-9]+(?!.*[0-9])/, parseInt(str.match(/[0-9]+(?!.*[0-9])/), 10)+1);
-
-	//console.log(str);
-
-// function getLastNumberOfString(str){
-//   var allNumbers = str.replace(/[^0-9]/g, ' ').trim().split(/\s+/);
-//   return parseInt(allNumbers[allNumbers.length - 1], 10);
-// }
-
-	//var v = "img1.jpg"
-	//var v = str;
-	//var newNum = v+1;
-
-
-	
-	//$(this).css('background-image', str);
+	$(".main-img").on('click', function() {
+		var displayImage = $(this).parent('div').attr('id');
+		var str = $(this).css('background-image');
+		str = str.replace(/[0-9]+(?!.*[0-9])/, parseInt(str.match(/[0-9]+(?!.*[0-9])/), 10)+1);
+		//console.log(str);
+		//$(this).css('background-image', str);
 
 			$.get(str)
 			.success(function(d){
@@ -53,6 +36,14 @@ $(".main-img").on('click', function() {
 			.error(function(d){
 			    $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
 			});
+
+	});
+
+
+	
+	//$(this).css('background-image', str);
+
+
 
 
     //$(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
@@ -87,7 +78,7 @@ $(".main-img").on('click', function() {
     // } else {
     // 	count = 0;
     // }
-});
+
 
 
 	//currentCount = 
