@@ -23,15 +23,15 @@ $( document ).ready(function() {
     		    var displayImage = $(this).parent('div').attr('id');
         $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
 
-        	$.get('assets/img/' + displayImage + '/img' + count + '.jpg')
-			.success(function(d){
-			    // video not removed: set thumbnail
-			    console.log('yay');
-			})
-			.error(function(d){
-			    // video removed: set your own thumbnail
-			    console.log('error');
-			});
+   //      	$.get('assets/img/' + displayImage + '/img' + count + '.jpg')
+			// .success(function(d){
+			//     // video not removed: set thumbnail
+			//     console.log('yay');
+			// })
+			// .error(function(d){
+			//     // video removed: set your own thumbnail
+			//     console.log('error');
+			// });
    //      	$('<img/>').attr('src', 'assets/img/' + displayImage + '/img' + count + '.jpg').off('load', function() {
    // 					//$(this).remove(); // prevent memory leaks as @benweet suggested
    // 					//$('body').css('background-image', 'url(http://picture.de/image.png)');
