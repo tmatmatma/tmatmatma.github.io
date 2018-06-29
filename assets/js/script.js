@@ -22,8 +22,7 @@ $( document ).ready(function() {
 
 			$.get('assets/img/' + displayImage + '/img' + count + '.jpg')
 			.success(function(d){
-			    console.log('yay');// video not removed: set thumbnail
-			    //div.css("background-image","url('http://img.youtube.com/vi/" + videoId + "/0.jpg')");   
+			    console.log('yay');
 			})
 			.error(function(d){
 			    count = 0;
