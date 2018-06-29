@@ -16,13 +16,13 @@ $( document ).ready(function() {
 	$(".main-img").each(function() {
 		// var i;
 		// for (var i = 1; i <= 20; i++) {
-			$(this).css('background-image', 'url(' + '_assets/img/' + $(this).parent('div').attr('id') + '/img1' + '.jpg' + ')');
+			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1' + '.jpg' + ')');
 
 		// }
 	});
 
 
-    // $(".main-img").css('background-image', 'url(' + '_assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
+    // $(".main-img").css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 
     var count=0
 
@@ -34,7 +34,7 @@ $( document ).ready(function() {
 
 
   //   $.ajax({
-  // url: '_assets/img/' + displayImage + '/img' + count + '.jpg',
+  // url: 'assets/img/' + displayImage + '/img' + count + '.jpg',
   // success: function(data){
 
     	$(".main-img").on('click', function() {
@@ -46,7 +46,7 @@ $( document ).ready(function() {
     		    var displayImage = $(this).parent('div').attr('id');
 
 $.ajax({
-    url:'_assets/img/' + displayImage + '/img' + count + '.jpg',
+    url:'assets/img/' + displayImage + '/img' + count + '.jpg',
     type:'HEAD',
     error: function()
     {
@@ -55,13 +55,13 @@ $.ajax({
     success: function()
     {
         count++;
-        $(this).css('background-image', 'url(' + '_assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
+        $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
     }
 });
 
 
 
-    		    // $(this).css('background-image', 'url(' + '_assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
+    		    // $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
     	
 
     		   // } else {
@@ -70,7 +70,7 @@ $.ajax({
 
 
     		   //  var numofImgs =  $.ajax({
-    					// 			url:'_assets/img/'+displayImage+'_title.jpg',
+    					// 			url:'assets/img/'+displayImage+'_title.jpg',
    						// 			type:'HEAD',
 								 //    error: function()
 								 //    { 
@@ -84,7 +84,7 @@ $.ajax({
 
 
 // $.ajax({
-//     url:'_assets/img/' + displayImage + '/img' + count + '.jpg',
+//     url:'assets/img/' + displayImage + '/img' + count + '.jpg',
 //     type:'HEAD',
 //     error: function()
 //     { 
@@ -93,7 +93,7 @@ $.ajax({
 //     success: function()
 //     {
 //         count++;
-//     		$(this).css('background-image', 'url(' + '_assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
+//     		$(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img' + count + '.jpg' + ')');
 //     }
 // });
 
@@ -122,7 +122,7 @@ $.ajax({
 
 
 
-// var url = "_assets/img/" + parentId;
+// var url = "assets/img/" + parentId;
 // var fileextension = ".png";
 
 // $.ajax({
