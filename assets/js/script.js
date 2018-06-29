@@ -28,7 +28,7 @@ $( document ).ready(function() {
 
 
 
-    count = 0;
+    // count = 1;
 
 
 
@@ -65,7 +65,7 @@ $( document ).ready(function() {
     	
 
     		    } else {
-    		   	count = 0;
+    		   	count = 1;
     		   }
 
 
