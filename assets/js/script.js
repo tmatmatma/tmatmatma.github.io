@@ -6,9 +6,9 @@
 $( document ).ready(function() {
 
 
-					$("div").error(function(){
-					        alert('ERROR!');
-					});
+					// $("div").error(function(){
+					//         alert('ERROR!');
+					// });
     // console.log( "ready!" );
     console.log('ready');
 	//var displayImage = $('.main-img').parent('div').attr('id');
@@ -24,7 +24,7 @@ $( document ).ready(function() {
 
     // $(".main-img").css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 
-    var count=0
+    var count=1
 
 
 
