@@ -1,0 +1,46 @@
+body {
+	box-sizing: border-box;
+	font-family:"Times New Roman", Times, Serif;
+	font-weight:normal;
+}
+
+img {
+	width:100%;
+}
+
+.container {
+	width:100%;
+	margin:0;
+	//padding:10px;
+	background:yellow;
+	display:flex;
+	flex-direction: row;
+}
+
+#header {
+	margin:0;
+	background:red;
+	width:50%;
+	font-size:30px;
+}
+
+#projects {
+	width:50%;
+}
+
+.title {
+	font-size:30px;
+}
+
+.desc {
+	font-size:20px;
+}
+
+
+
+.main-img {
+	min-height:50vh;
+	background-repeat: no-repeat;
+    background-size: contain;
+}
+
