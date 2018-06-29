@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
 
 
-    console.log('ready');
+    console.log('okay');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	});
