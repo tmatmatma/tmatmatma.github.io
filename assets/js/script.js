@@ -11,7 +11,7 @@ $( document ).ready(function() {
 
 
 
-	count = 0;
+	count = 1;
     	$(".main-img").on('click', function() {
     		
     		count++;
@@ -25,7 +25,7 @@ $( document ).ready(function() {
 			    console.log('yay');
 			})
 			.error(function(d){
-			    count = 0;
+			    count = 1;
 			    $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
 			});
 
