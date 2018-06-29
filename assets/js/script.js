@@ -11,7 +11,7 @@ $( document ).ready(function() {
 					// console.log(increment_last);
 
 
-    console.log('good');
+    console.log('ben');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -31,7 +31,7 @@ $(".main-img").on('click', function() {
 
 	str = str.replace(/[0-9]+(?!.*[0-9])/, parseInt(str.match(/[0-9]+(?!.*[0-9])/), 10)+1);
 
-	console.log(str);
+	//console.log(str);
 
 // function getLastNumberOfString(str){
 //   var allNumbers = str.replace(/[^0-9]/g, ' ').trim().split(/\s+/);
