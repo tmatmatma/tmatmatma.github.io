@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 
 
-    console.log('help');
+    console.log('helppppppp');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -45,28 +45,14 @@ $(document).ready(function() {
         bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
         //alert(bg);
         $(this).css('background-image', str);
-
-  //       $.ajax({
-		//     url: "bg", 
-		//     data: {value: 1},
-		//     type: "HEAD",
-		//     error: function(XMLHttpRequest, textStatus, errorThrown){
-		//         alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
-		//     },
-		//     success: function(data){
-		//     	$(this).css('background-image', str);
-		//     }
-		// });
-
 		  $.ajax({
 		    type: 'HEAD',
 		    url: bg,
-		    success: function(){
-		    
+		    success: function(){    
 		    	},
 				error:function (xhr, ajaxOptions, thrownError){
     				if(xhr.status==404) {
-        		//alert(thrownError);
+    					console.log(this);
         		$(".main-img").css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
 
     			}
