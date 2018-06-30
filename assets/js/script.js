@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 
 
-    console.log('rad');
+    console.log('radd');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -26,7 +26,7 @@ $( document ).ready(function() {
 		var displayImage = $(this).parent('div').attr('id');
 		var str = $(this).css('background-image');
 		str = str.replace(/[0-9]+(?!.*[0-9])/, parseInt(str.match(/[0-9]+(?!.*[0-9])/), 10)+1);
-		//console.log(str);
+		console.log(str);
 		//$(this).css('background-image', str);
 
 			$.get(str)
