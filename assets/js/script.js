@@ -3,7 +3,11 @@
 $(document).ready(function() {
     console.log('ready');
 	$(".main-img").each(function() {
-		$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
+		if ($(this).text().toLowerCase().match(/\.(jpg)/g)) {
+        		$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
+    	} else if ($(this).text().toLowerCase().match(/\.(gif)/g)) {
+    			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.gif' + ')');
+    	}
 	});
 	
 	$(".main-img").on('click', function() {
