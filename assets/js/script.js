@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 
 
-    console.log('goodd');
+    console.log('good');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -40,11 +40,11 @@ $( document ).ready(function() {
 		//console.log(str);
 
 
-			//$(this).css('background-image', str);
-			
+		$(this).css('background-image', str);		
 		var bg = $(this).css('background-image');
         bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
         alert(bg);
+        $(this).css('background-image', str);
 
   //       $.ajax({
 		//     url: "bg", 
@@ -60,12 +60,15 @@ $( document ).ready(function() {
 
 		  $.ajax({
 		    type: 'HEAD',
-		    url: "bg",
+		    url: bg,
 		    success: function(){
-		     	$(this).css('background-image', str);
-		    },
-		    error: function() {
-		      alert('404');
+		    
+		    	},
+				error:function (xhr, ajaxOptions, thrownError){
+    				if(xhr.status==404) {
+        		alert(thrownError);
+    			}
+				}
 		    }
 		  });
 			// $.get(str)
