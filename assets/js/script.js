@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 
 
-    console.log('good');
+    console.log('goodd');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -40,23 +40,34 @@ $( document ).ready(function() {
 		//console.log(str);
 
 
-			$(this).css('background-image', str);
+			//$(this).css('background-image', str);
 			
 		var bg = $(this).css('background-image');
         bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
         alert(bg);
 
-        $.ajax({
-		    url: "bg", 
-		    data: {value: 1},
-		    type: 'post',
-		    error: function(XMLHttpRequest, textStatus, errorThrown){
-		        alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+  //       $.ajax({
+		//     url: "bg", 
+		//     data: {value: 1},
+		//     type: "HEAD",
+		//     error: function(XMLHttpRequest, textStatus, errorThrown){
+		//         alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+		//     },
+		//     success: function(data){
+		//     	$(this).css('background-image', str);
+		//     }
+		// });
+
+		  $.ajax({
+		    type: 'HEAD',
+		    url: "bg",
+		    success: function(){
+		     	$(this).css('background-image', str);
 		    },
-		    success: function(data){
-		    	$(this).css('background-image', str);
+		    error: function() {
+		      alert('404');
 		    }
-		});
+		  });
 			// $.get(str)
 			// .success(function(d){
 			//     $(this).css('background-image',str);
