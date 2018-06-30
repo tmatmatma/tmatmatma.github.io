@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 
 
-    console.log('radd');
+    console.log('raddd');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -31,7 +31,7 @@ $( document ).ready(function() {
 
 			$.get(str)
 			.success(function(d){
-			    $(this).css('background-image', str);
+			    $(this).css('background-image',str);
 			})
 			.error(function(d){
 			    $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
