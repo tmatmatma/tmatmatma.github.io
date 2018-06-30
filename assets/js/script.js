@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 
 
-    console.log('good');
+    console.log('goodd');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -20,14 +20,32 @@ $( document ).ready(function() {
 	});
 
 
+		// $.ajax({
+		//   url: "images/parenting/",
+		//   success: function(data){
+		//      $(data).find("a:contains(.jpg)").each(function(){
+		//         var filename = this.href.replace(window.location.host, "").replace("http://", "");
+		//         //$("body").append("<img src='images/parenting/" + filename + "'>");
+		//         console.log(filename);
+		//      });
+		//   }
+		// });
+
 
 
 	$(".main-img").on('click', function() {
 		var displayImage = $(this).parent('div').attr('id');
 		var str = $(this).css('background-image');
 		str = str.replace(/[0-9]+(?!.*[0-9])/, parseInt(str.match(/[0-9]+(?!.*[0-9])/), 10)+1);
-		console.log(str);
-		$(this).css('background-image', str);
+		//console.log(str);
+
+
+			$(this).css('background-image', str);
+			
+			$.get(str, function(data){
+  				alert("Data: " + data);
+			});
+
 
 			// $.get(str)
 			// .success(function(d){
