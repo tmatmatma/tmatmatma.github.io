@@ -68,7 +68,7 @@ $( document ).ready(function() {
     				if(xhr.status==404) {
         		alert(thrownError);
     			}
-				}
+				
 		    }
 		  });
 			// $.get(str)
