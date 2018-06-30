@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 
 
-    console.log('goodd');
+    console.log('good');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -37,22 +37,33 @@ $( document ).ready(function() {
 		var displayImage = $(this).parent('div').attr('id');
 		var str = $(this).css('background-image');
 		str = str.replace(/[0-9]+(?!.*[0-9])/, parseInt(str.match(/[0-9]+(?!.*[0-9])/), 10)+1);
-		//console.log(str);		
+		//console.log(str);
+
+
+			$(this).css('background-image', str);
+			
 		var bg = $(this).css('background-image');
         bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
-        //alert(bg);
+        alert(bg);
 
         $.ajax({
 		    url: "bg", 
 		    data: {value: 1},
 		    type: 'post',
-		    error: function(d){
-		        alert('error');
+		    error: function(XMLHttpRequest, textStatus, errorThrown){
+		        alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
 		    },
-		    success: function(d){
+		    success: function(data){
 		    	$(this).css('background-image', str);
 		    }
 		});
+			// $.get(str)
+			// .success(function(d){
+			//     $(this).css('background-image',str);
+			// })
+			// .error(function(d){
+			//     $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
+			// });
 
 	});
 
