@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 
 
-    console.log('help');
+    console.log('helpppppp');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
