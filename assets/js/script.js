@@ -1,6 +1,6 @@
 
 
-$( document ).ready(function() {
+$(document).ready(function() {
 
 					// function increment_last(v) {
 					//     return v.replace(/[0-9]+(?!.*[0-9])/, function(match) {
@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 
 
-    console.log('help');
+    console.log('helppp');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -66,10 +66,11 @@ $( document ).ready(function() {
 		    	},
 				error:function (xhr, ajaxOptions, thrownError){
     				if(xhr.status==404) {
-        		//alert(thrownError);
-        		$(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
+        		alert(thrownError);
+        		$(".main-img").css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
+
     			}
-				
+
 		    }
 		  });
 			// $.get(str)
