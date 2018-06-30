@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 
 
-    console.log('raddd');
+    console.log('good');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -27,15 +27,15 @@ $( document ).ready(function() {
 		var str = $(this).css('background-image');
 		str = str.replace(/[0-9]+(?!.*[0-9])/, parseInt(str.match(/[0-9]+(?!.*[0-9])/), 10)+1);
 		console.log(str);
-		//$(this).css('background-image', str);
+		$(this).css('background-image', str);
 
-			$.get(str)
-			.success(function(d){
-			    $(this).css('background-image',str);
-			})
-			.error(function(d){
-			    $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
-			});
+			// $.get(str)
+			// .success(function(d){
+			//     $(this).css('background-image',str);
+			// })
+			// .error(function(d){
+			//     $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
+			// });
 
 	});
 
