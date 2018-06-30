@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 
 
-    console.log('helpppppp');
+    console.log('helpppppppppppppp');
 	$(".main-img").each(function() {
 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	
@@ -55,7 +55,9 @@ $(document).ready(function() {
     				if(xhr.status==404) {
     					//console.log(revert);
     					//revert; 
-        		$(".main-img").css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
+        			$(".main-img").each(function() {
+						$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
+					});
 
     			}
 
