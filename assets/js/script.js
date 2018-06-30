@@ -37,23 +37,22 @@ $( document ).ready(function() {
 		var displayImage = $(this).parent('div').attr('id');
 		var str = $(this).css('background-image');
 		str = str.replace(/[0-9]+(?!.*[0-9])/, parseInt(str.match(/[0-9]+(?!.*[0-9])/), 10)+1);
-		//console.log(str);
+		//console.log(str);		
+		var bg = $(this).css('background-image');
+        bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
+        //alert(bg);
 
-
-			$(this).css('background-image', str);
-			
-			$.get(str, function(data){
-  				alert("Data: " + data);
-			});
-
-
-			// $.get(str)
-			// .success(function(d){
-			//     $(this).css('background-image',str);
-			// })
-			// .error(function(d){
-			//     $(this).css('background-image', 'url(' + 'assets/img/' + displayImage + '/img1.jpg' + ')');
-			// });
+        $.ajax({
+		    url: "bg", 
+		    data: {value: 1},
+		    type: 'post',
+		    error: function(d){
+		        alert('error');
+		    },
+		    success: function(d){
+		    	$(this).css('background-image', str);
+		    }
+		});
 
 	});
 
