@@ -44,3 +44,9 @@ img {
     background-size: contain;
 }
 
+.main-gif {
+	min-height:50vh;
+	background-repeat: no-repeat;
+    background-size: contain;
+}
+

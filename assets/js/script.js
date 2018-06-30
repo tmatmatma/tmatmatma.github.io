@@ -1,7 +1,7 @@
 
 
 $(document).ready(function() {
-    console.log('readyyy');
+    console.log('ready');
 	$(".main-img").each(function() {
 		$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	});
@@ -21,10 +21,9 @@ $(document).ready(function() {
 		    	},
 				error:function (xhr, ajaxOptions, thrownError){
     				if(xhr.status==404) {
-        			//$(".main-img").each(function() {
+        			$(".main-img").each(function() {
 						$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
-					}
-					//});
+					});
     			}
 		    }
 		});
