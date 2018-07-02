@@ -44,22 +44,22 @@ $(document).ready(function() {
 		var bg = $(this).css('background-image');
         bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
         $(this).css('background-image', str);
-				 //  	$.ajax({
-				 //    type: 'HEAD',
-				 //    url: bg,
-				 //    success: function(){    
-				 //    	},
-					// 	error:function (xhr, ajaxOptions, thrownError){
-		   //  				if(xhr.status==404) {
-		   //      			$(".main-img").each(function() {
-					// 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
-					// 			});
-					// 		$(".main-gif").each(function() {
-					// 			$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.gif' + ')');
-					// 			});
-		   //  				}
-				 //    	}
-					// });
+				  	$.ajax({
+				    type: 'HEAD',
+				    url: bg,
+				    success: function(){    
+				    	},
+						error:function (xhr, ajaxOptions, thrownError){
+		    				if(xhr.status==404) {
+		        			$(".main-img").each(function() {
+								$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
+								});
+							$(".main-gif").each(function() {
+								$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.gif' + ')');
+								});
+		    				}
+				    	}
+					});
 	});
 
 //yahoo
