@@ -7,19 +7,20 @@ body {
 	box-sizing: border-box;
 	font-family:"Times New Roman", Times, Serif;
 	font-weight:normal;
-	color:black;
 	font-size:30px;
 }
 
 
 
 a {
-	color:black;
+	color: blue !important;
+	text-decoration: none;
 }
 
 a:hover{
-	color:blue;
+	color: blue;
 	text-decoration: none;
+	border-bottom:1px blue solid;
 }
 
 a:visited{
@@ -56,20 +57,52 @@ img {
 }
 
 .initiate-treat {
-	animation: blinkers .5s;
-	animation-fill-mode: forwards;
+	animation: blinkers .5s forwards;
+	-webkit-animation: blinkers .5s infinite; 
+	-moz-animation:    blinkers .5s infinite; 
+	-o-animation:      blinkers .5s infinite; 
+
 }
 
 @keyframes blinkers {
-  0% { opacity: 1; }
-  25% { opacity: 1; }
-  50% { opacity: 1; }
-  70% { opacity: 0; }
-  80% { opacity: 1; }
-  90% { opacity: 0; }
-  100% { opacity: 1; }
+	0% { opacity: 1; }
+	25% { opacity: 1; }
+	50% { opacity: 1; }
+	70% { opacity: 0; }
+	80% { opacity: 1; }
+	90% { opacity: 0; }
+	100% { opacity: 1; }
 }
 
+@-webkit-keyframes blinkers {
+	0% { opacity: 1; }
+	25% { opacity: 1; }
+	50% { opacity: 1; }
+	70% { opacity: 0; }
+	80% { opacity: 1; }
+	90% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-moz-keyframes blinkers {
+	0% { opacity: 1; }
+	25% { opacity: 1; }
+	50% { opacity: 1; }
+	70% { opacity: 0; }
+	80% { opacity: 1; }
+	90% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-o-keyframes blinkers {
+	0% { opacity: 1; }
+	25% { opacity: 1; }
+	50% { opacity: 1; }
+	70% { opacity: 0; }
+	80% { opacity: 1; }
+	90% { opacity: 0; }
+	100% { opacity: 1; }
+}
 
 #facts {
 	margin:0;
@@ -125,13 +158,13 @@ ul.dashed > li::before {
 }
 
 .container {
-	width: calc(100% - 20px);
-	//max-width:1300px;
+	width: 100%;
 	display:flex;
 	flex-direction: row;
 	position:relative;
 	top:0;
 	left:0;
+	margin:10px;
 }
 
 .header {
@@ -164,44 +197,137 @@ ul.dashed > li::before {
 #projects {
 	width:100%;
 	padding-left:0;
-	margin:10px;
+	margin:0 auto;
 }
 
 .title {
 	margin-left:60px;
-	max-width:600px;
+	max-width:400px;
+}
+
+.year {
+	font-size:15px;
+	margin-top:10px;
 }
 
 .desc {
-	
 	margin-bottom:50px;
 	max-width: 700px;
+	padding-right:30px;
 }
 
- .desc p {
- 	margin:0;
+.desc p {
+ 	margin: 0;
+ 	text-indent: 60px;
+}
+
+ .desc p:first-of-type {
+    text-indent: 0;
+}
+
+ .spotlight {
+ 	color:blue;
+ 	cursor:pointer;
  }
 
+ .spotlight:hover {
+ 	color:blue;
+	border-bottom:1px blue solid;
+	cursor:pointer;
+ }
+
+
+/*.cue {
+	position: absolute;
+	right:0px;
+	bottom:0;
+	cursor:pointer;
+}*/
+
+/*.covers > .main-img {
+	min-height:100vh !important;
+}*/
+
+#vert {
+	min-height:70vh;
+	height:auto;
+}
+
+#horz{
+	min-height:300px;
+	height:auto;
+	width:100%;
+}
+
+/*.shadow {
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+
+}*/
+
 .main-img {
-	min-height:75vh;
-	min-width:100%;
-/*	margin-right:10px;
-*/	background-repeat: no-repeat;
+	position:relative;
+	background-repeat: no-repeat;
     background-size: contain;
     background-position: left bottom;
+    cursor:pointer;
+}
 
+.single-img {
+/*	min-height: 80vh;
+*/	width: 100%;
+	background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
 }
 
 .main-gif {
-	min-height:75vh;
-	min-width:100%;
+/*	min-height: 80vh;
+*/	width:100%;
 	background-repeat: no-repeat;
     background-size: contain;
     background-position: left bottom; 
+    cursor:pointer;
+}
+
+/*.covers > .main-img {
+	animation: coverloop 10s infinite; 
+	-webkit-animation: coverloop 10s infinite; 
+	-moz-animation:    coverloop 10s infinite; 
+	-o-animation:      coverloop 10s infinite; 
 
 }
 
+@keyframes coverloop {
+  	 0% { background-image: url("assets/img/proj-2/img1.jpg"); }
+	10% { background-image: url("assets/img/proj-2/img2.jpg"); }
+	20% { background-image: url("assets/img/proj-2/img3.jpg"); }
+  	30% { background-image: url("assets/img/proj-2/img4.jpg"); }
+	40% { background-image: url("assets/img/proj-2/img5.jpg"); }
+	50% { background-image: url("assets/img/proj-2/img6.jpg"); }
+	60% { background-image: url("assets/img/proj-2/img7.jpg"); }
+	70% { background-image: url("assets/img/proj-2/img8.jpg"); }
+	80% { background-image: url("assets/img/proj-2/img9.jpg"); }
+	90% { background-image: url("assets/img/proj-2/img10.jpg"); }
+}
+*/
+
+
 @media screen and (min-width: 720px) {
+
+		#horz{
+			min-height:80vh;
+			height:auto;
+			width:95%;
+		}
+
+		#vert {
+			min-height:100vh;
+			height:auto;
+		}
+
+		.title {
+			margin-left:60px;
+		}
 		
 
 		#projects {
@@ -210,7 +336,7 @@ ul.dashed > li::before {
 		}
 
 		.footnote {
-			max-width:350px;
+			max-width:500px;
 		}
 
 
