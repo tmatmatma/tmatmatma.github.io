@@ -7,7 +7,7 @@ body {
 	box-sizing: border-box;
 	font-family:"Times New Roman", Times, Serif;
 	font-weight:normal;
-	font-size:30px;
+	font-size:25px;
 }
 
 
@@ -31,7 +31,7 @@ a:visited{
 .footnote-sup{
 	color:blue;
 	cursor:pointer;
-	font-size:20px;
+	font-size:15px;
 	margin-top:-5px;
 }
 
@@ -195,9 +195,9 @@ ul.dashed > li::before {
 }
 
 #projects {
-	width:100%;
+	width:95%;
 	padding-left:0;
-	margin:0 auto;
+	margin:0;
 }
 
 .title {
@@ -270,6 +270,7 @@ ul.dashed > li::before {
     background-size: contain;
     background-position: left bottom;
     cursor:pointer;
+    padding-right:10px;
 }
 
 .single-img {
@@ -314,6 +315,14 @@ ul.dashed > li::before {
 
 @media screen and (min-width: 720px) {
 
+		.footnote-sup{
+			font-size:20px;
+		}
+
+		body {
+			font-size:30px;
+		}
+
 		#horz{
 			min-height:80vh;
 			height:auto;
@@ -343,6 +352,7 @@ ul.dashed > li::before {
 		.main-img {
 
 		}
+
 		.main-gif {
 		}
 
