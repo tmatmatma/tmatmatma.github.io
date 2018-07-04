@@ -26,7 +26,7 @@ $(document).ready(function() {
 		 	$('#proj-17 > .main-img').append('<video style="width: 100%; height: auto; margin:0;" class="kewlvid" autoplay="" playsinline="" loop="" muted="" src="assets/img/proj-10/cbdoil.mov"></video>');
  		 	//$('.kewlvid').on('click', function() {
  		 		//$(this).parent().find('.main-img').css('background-image', 'url("assets/img/proj-17/img1.gif")');
- 		 	});
+ 		 	// });
  		 }
 	});
 //window resize
