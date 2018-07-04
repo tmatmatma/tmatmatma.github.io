@@ -236,16 +236,9 @@ ul.dashed > li::before {
 	cursor:pointer;
  }
 
+/*.shadow {
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 
-/*.cue {
-	position: absolute;
-	right:0px;
-	bottom:0;
-	cursor:pointer;
-}*/
-
-/*.covers > .main-img {
-	min-height:100vh !important;
 }*/
 
 #vert {
@@ -255,14 +248,19 @@ ul.dashed > li::before {
 
 #horz{
 	min-height:300px;
-	height:auto;
 	width:100%;
 }
 
-/*.shadow {
-	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+#vid {
+	min-height:300px;
+	height:auto;
+	width:95%;
+}
 
-}*/
+.nyt-illos {
+	min-height:300px !important;
+	width:80%;
+}
 
 .main-img {
 	position:relative;
@@ -274,11 +272,22 @@ ul.dashed > li::before {
 }
 
 .single-img {
-/*	min-height: 80vh;
-*/	width: 100%;
+	position:relative;
 	background-repeat: no-repeat;
     background-size: contain;
     background-position: left bottom;
+    cursor:pointer;
+    padding-right:10px;
+}
+
+.single-mov {
+	position: relative;
+}
+
+video {
+	position:absolute;
+	left:0;
+	bottom:0;
 }
 
 .main-gif {
@@ -324,9 +333,15 @@ ul.dashed > li::before {
 		}
 
 		#horz{
-			min-height:80vh;
-			height:auto;
+			min-height:50vh;
 			width:95%;
+		}
+
+		#vid {
+			min-height:50vh;
+			height:auto;
+			max-width:900px;
+
 		}
 
 		#vert {
@@ -387,6 +402,11 @@ ul.dashed > li::before {
 		ul.dashed {
 			max-width:50vw;
 		}
+
+		#horz{
+			min-height:80vh;
+		}
+
 
 
 
