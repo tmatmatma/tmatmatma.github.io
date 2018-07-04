@@ -1,4 +1,10 @@
 $(document).ready(function() {
+	            $(window).scroll(function(e) {   
+			    if($(window).scrollTop() >=1000  &&   $('.header').hasClass('slide-right') ) {
+			       $(window).scrollTop(1000);
+			    }
+			});
+
 //footnotes	
 	$('sup.footnote-sup').each(function(i,n) {
 		var footnoteNum = i + 1
@@ -21,12 +27,9 @@ $(document).ready(function() {
 
 	$('#proj-17 > .main-img').on('click', function() {
 		var endConfImg = $('#proj-17 > .main-img').css('background-image');
-		//endConfImg = endConfImg.replace('url("','').replace('")','');
 		 if (endConfImg.indexOf("img10.jpg") >=0) {
-		 	$('#proj-17 > .main-img').append('<video style="width: 100%; height: auto; margin:0;" class="kewlvid" autoplay="" playsinline="" loop="" muted="" src="assets/img/proj-10/cbdoil.mov"></video>').css('background-image', 'none');
- 		 	//$('.kewlvid').on('click', function() {
- 		 		//$(this).parent().find('.main-img').css('background-image', 'url("assets/img/proj-17/img1.gif")');
- 		 	// });
+		 	$('#proj-17').prepend('<div class="single-mov" id="vid"><video style="width: 100%; height: auto; margin:0;" class="kewlvid" autoplay="" playsinline="" loop="" muted="" src="assets/img/proj-17/human-signage480p.mov"></video></div>');
+ 		 	$('.main-img').remove();
  		 }
 	});
 //window resize
@@ -36,12 +39,15 @@ $(document).ready(function() {
             $('.header').removeClass('slide-right');
             $("#work").html('About');
             $("p:contains('About')").append('<br>⇽');
+
         } else {
             $('.header').addClass('slide-right');
             $('.header').removeClass('slide-left');
             $("#work").html('Work');
             $("p:contains('Work')").append('<br>⇾');
         }
+
+
     }).resize(); 
 		
 //fool's navigator
@@ -102,6 +108,7 @@ $(document).ready(function() {
         $("p:contains('Work')").append('<br>⇾');
         $(".header").css('background', 'white');
         $("#facts").css('display','inline');
+        //$('#projects').css('position','fixed');
       } 
 	});
 
