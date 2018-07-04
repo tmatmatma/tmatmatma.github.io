@@ -1,9 +1,9 @@
 $(document).ready(function() {
-	            $(window).scroll(function(e) {   
-			    if($(window).scrollTop() >=1000  &&   $('.header').hasClass('slide-right') ) {
-			       $(window).scrollTop(1000);
-			    }
-			});
+	  //           $(window).scroll(function(e) {   
+			//     if($(window).scrollTop() >=1000  &&   $('.header').hasClass('slide-right') ) {
+			//        $(window).scrollTop(1000);
+			//     }
+			// });
 
 //footnotes	
 	$('sup.footnote-sup').each(function(i,n) {
