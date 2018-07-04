@@ -7,7 +7,7 @@ body {
 	box-sizing: border-box;
 	font-family:"Times New Roman", Times, Serif;
 	font-weight:normal;
-	font-size:25px;
+	font-size:20px;
 }
 
 
@@ -40,9 +40,10 @@ a:visited{
 	max-height:0px;
 	overflow: hidden;
   	opacity: 0;
-  	font-size:15px;
-  	padding-left:60px;
-  	max-width:70%;
+  	font-size:12px;
+/*  	padding-left:30px;*/
+	padding-left: 60px;
+  	max-width:90%;
 }
 
 .show {
@@ -169,7 +170,7 @@ ul.dashed > li::before {
 	z-index:3;
 	top:0;
 	left:0;
-	height:300vh;
+	height:350vh;
 }
 
 .header p {
@@ -211,7 +212,7 @@ ul.dashed > li::before {
 
 .desc p {
  	margin: 0;
- 	text-indent: 60px;
+ 	text-indent: 30px;
 }
 
  .desc p:first-of-type {
@@ -284,6 +285,10 @@ video {
 
 @media screen and (min-width: 720px) {
 
+		body {
+			font-size:30px;
+		}
+
 		.header {
 			height:300vh;
 		}
@@ -292,8 +297,16 @@ video {
 			font-size:20px;
 		}
 
-		body {
-			font-size:30px;
+		.footnote {
+			max-width: 500px;
+/*			padding-left: 60px;*/
+			font-size:15px;
+		}
+
+
+		.desc p {
+		 	margin: 0;
+		 	text-indent: 60px;
 		}
 
 		#horz{
@@ -305,7 +318,6 @@ video {
 			min-height:50vh;
 			height:auto;
 			max-width:900px;
-
 		}
 
 		#vert {
@@ -322,11 +334,6 @@ video {
 			padding-left:25%;
 
 		}
-
-		.footnote {
-			max-width:500px;
-		}
-
 
 		.main-img {
 

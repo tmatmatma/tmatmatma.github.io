@@ -7,8 +7,8 @@ $(document).one('ready', function() {
 
 $(document).ready(function() {
 	        $(window).scroll(function(e) {   
-			    if($(window).scrollTop() >=1000  &&   $('.header').hasClass('slide-right') ) {
-			       $(window).scrollTop(1000);
+			    if($(window).scrollTop() >=900  &&   $('.header').hasClass('slide-right') ) {
+			       $(window).scrollTop(900);
 			    }
 			});
 
@@ -111,7 +111,7 @@ $(document).ready(function() {
         $("p:contains('Work')").append('<br>⇾');
         $(".header").css('background', 'white');
         $("#facts").css('display','inline');
-        //$('#projects').css('position','fixed');
+        
       } 
 	});
 
