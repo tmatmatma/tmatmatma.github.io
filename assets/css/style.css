@@ -65,44 +65,39 @@ img {
 }
 
 @keyframes blinkers {
-	0% { opacity: 1; }
-	25% { opacity: 1; }
-	50% { opacity: 1; }
-	70% { opacity: 0; }
-	80% { opacity: 1; }
-	90% { opacity: 0; }
-	100% { opacity: 1; }
+	0% { opacity: 0; }
+	25% { opacity: 1;}
+	50% { opacity: 0; }
+	75% { opacity: 1; }
+	100% { opacity: 0; }
 }
 
 @-webkit-keyframes blinkers {
-	0% { opacity: 1; }
-	25% { opacity: 1; }
-	50% { opacity: 1; }
-	70% { opacity: 0; }
-	80% { opacity: 1; }
-	90% { opacity: 0; }
-	100% { opacity: 1; }
+	0% { opacity: 0; }
+	25% { opacity: 1;}
+	50% { opacity: 0; }
+	75% { opacity: 1; }
+	100% { opacity: 0; }
 }
+
 
 @-moz-keyframes blinkers {
-	0% { opacity: 1; }
-	25% { opacity: 1; }
-	50% { opacity: 1; }
-	70% { opacity: 0; }
-	80% { opacity: 1; }
-	90% { opacity: 0; }
-	100% { opacity: 1; }
+	0% { opacity: 0; }
+	25% { opacity: 1;}
+	50% { opacity: 0; }
+	75% { opacity: 1; }
+	100% { opacity: 0; }
 }
 
+
 @-o-keyframes blinkers {
-	0% { opacity: 1; }
-	25% { opacity: 1; }
-	50% { opacity: 1; }
-	70% { opacity: 0; }
-	80% { opacity: 1; }
-	90% { opacity: 0; }
-	100% { opacity: 1; }
+	0% { opacity: 0; }
+	25% { opacity: 1;}
+	50% { opacity: 0; }
+	75% { opacity: 1; }
+	100% { opacity: 0; }
 }
+
 
 #facts {
 	margin:0;
@@ -234,10 +229,6 @@ ul.dashed > li::before {
 	cursor:pointer;
  }
 
-/*.shadow {
-	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-
-}*/
 
 #vert {
 	min-height:70vh;
@@ -284,36 +275,12 @@ video {
 }
 
 .main-gif {
-/*	min-height: 80vh;
-*/	width:100%;
+	width:100%;
 	background-repeat: no-repeat;
     background-size: contain;
     background-position: left bottom; 
     cursor:pointer;
 }
-
-/*.covers > .main-img {
-	animation: coverloop 10s infinite; 
-	-webkit-animation: coverloop 10s infinite; 
-	-moz-animation:    coverloop 10s infinite; 
-	-o-animation:      coverloop 10s infinite; 
-
-}
-
-@keyframes coverloop {
-  	 0% { background-image: url("assets/img/proj-2/img1.jpg"); }
-	10% { background-image: url("assets/img/proj-2/img2.jpg"); }
-	20% { background-image: url("assets/img/proj-2/img3.jpg"); }
-  	30% { background-image: url("assets/img/proj-2/img4.jpg"); }
-	40% { background-image: url("assets/img/proj-2/img5.jpg"); }
-	50% { background-image: url("assets/img/proj-2/img6.jpg"); }
-	60% { background-image: url("assets/img/proj-2/img7.jpg"); }
-	70% { background-image: url("assets/img/proj-2/img8.jpg"); }
-	80% { background-image: url("assets/img/proj-2/img9.jpg"); }
-	90% { background-image: url("assets/img/proj-2/img10.jpg"); }
-}
-*/
-
 
 @media screen and (min-width: 720px) {
 
