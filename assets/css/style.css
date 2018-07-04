@@ -148,6 +148,8 @@ ul.dashed > li::before {
 	text-align:left;
 	width:95%;
 	padding-bottom:20px;
+	pointer-events:all;
+	cursor:pointer;
 }
 
 #contact {
@@ -181,7 +183,7 @@ ul.dashed > li::before {
 }
 
 .slide-left {
-    left: -75vw;
+    left: -81vw;
     transition: left .3s ease;
 }
 
@@ -251,11 +253,6 @@ ul.dashed > li::before {
 	min-height:300px;
 	height:auto;
 	width:95%;
-}
-
-.nyt-illos {
-	min-height:300px !important;
-	width:80%;
 }
 
 .main-img {
@@ -382,6 +379,7 @@ video {
 		top:10px;
 		right: 20px;
 		width:20%;
+
 		}
 
 		#facts{

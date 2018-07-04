@@ -1,9 +1,16 @@
+$(document).one('ready', function() {
+	 if($(window).width() <= 900) {
+	    $('.header').addClass('slide-right');
+        $('.header').removeClass('slide-left');
+    }
+});
+
 $(document).ready(function() {
-	  //           $(window).scroll(function(e) {   
-			//     if($(window).scrollTop() >=1000  &&   $('.header').hasClass('slide-right') ) {
-			//        $(window).scrollTop(1000);
-			//     }
-			// });
+	        $(window).scroll(function(e) {   
+			    if($(window).scrollTop() >=1000  &&   $('.header').hasClass('slide-right') ) {
+			       $(window).scrollTop(1000);
+			    }
+			});
 
 //footnotes	
 	$('sup.footnote-sup').each(function(i,n) {
@@ -41,13 +48,9 @@ $(document).ready(function() {
             $("p:contains('About')").append('<br>⇽');
 
         } else {
-            $('.header').addClass('slide-right');
-            $('.header').removeClass('slide-left');
             $("#work").html('Work');
             $("p:contains('Work')").append('<br>⇾');
         }
-
-
     }).resize(); 
 		
 //fool's navigator
@@ -101,7 +104,7 @@ $(document).ready(function() {
      if ($(".header").hasClass('slide-left')) {
         $("#work").html('About');
         $("p:contains('About')").append('<br>⇽');
-        $(".header").css('background', 'transparent');
+        $(".header").css({'background' : 'transparent', 'pointer-events':'none'});
         $("#facts").css('display','none');
       } else {
         $("#work").html('Work');
