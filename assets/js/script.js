@@ -6,9 +6,7 @@ $(document).one('ready', function() {
 });
 
 $(document).ready(function() {
-
-
-	        $(window).scroll(function(e) {   
+	        $(window).scroll(function(e) { 
 			    if($(window).scrollTop() >=900  &&   $('.header').hasClass('slide-right') ) {
 			       $(window).scrollTop(900);
 			    }
@@ -30,10 +28,6 @@ $(document).ready(function() {
 	});
 
 //conf vid load
-	$("img[src='assets/img/proj-17/img10.jpg']").on('click', function() {
-		console.log('help');
-	});	
-
 	$('#proj-17 > .main-img').on('click', function() {
 		var endConfImg = $('#proj-17 > .main-img').css('background-image');
 		 if (endConfImg.indexOf("img10.jpg") >=0) {
