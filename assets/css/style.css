@@ -57,8 +57,9 @@ img {
 	width:100%;
 }
 
+
 .initiate-treat {
-	animation: blinkers .5s forwards;
+	animation: blinkers .5s infinite;
 	-webkit-animation: blinkers .5s infinite; 
 	-moz-animation:    blinkers .5s infinite; 
 	-o-animation:      blinkers .5s infinite; 
@@ -205,6 +206,7 @@ ul.dashed > li::before {
 }
 
 .desc {
+	position:relative;
 	margin-bottom:50px;
 	max-width: 700px;
 	padding-right:30px;
@@ -248,7 +250,7 @@ ul.dashed > li::before {
 }
 
 .main-img {
-	position:relative;
+	position: relative;
 	background-repeat: no-repeat;
     background-size: contain;
     background-position: left bottom;
@@ -256,13 +258,41 @@ ul.dashed > li::before {
     padding-right:10px;
 }
 
-.single-img {
-	position:relative;
+.main-gif {
+	position: relative;
+	width:100%;
 	background-repeat: no-repeat;
     background-size: contain;
-    background-position: left bottom;
+    background-position: left bottom; 
     cursor:pointer;
-    padding-right:10px;
+}
+
+.spacer {
+	position: absolute;
+	top:0px;
+	right:0px;
+	height:100px;
+	width:100px;
+	z-index:2;
+	background:none;
+	pointer-events:none;
+}
+
+.img-active:after {
+	position: relative;
+	right:5px;
+	content:'⇾';
+/*	font-size:50px;*/
+	color:black;
+	animation: goforward .5s infinite;
+}
+
+
+@keyframes goforward {
+	0% { right:5px; }
+	50% { right:10px;  }	
+	100% { right:5px; }
+
 }
 
 .single-mov {
@@ -275,13 +305,7 @@ video {
 	bottom:0;
 }
 
-.main-gif {
-	width:100%;
-	background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left bottom; 
-    cursor:pointer;
-}
+
 
 @media screen and (min-width: 720px) {
 
@@ -321,7 +345,7 @@ video {
 		}
 
 		#vert {
-			min-height:100vh;
+			min-height:90vh;
 			height:auto;
 		}
 
