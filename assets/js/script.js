@@ -15,7 +15,7 @@ $.fn.isFullyInViewport = function() {
 };
 
 $(document).one('ready', function() {
-	 if($(window).width() <= 900) {
+	 if($(window).width() <= 750) {
 	    $('.header').addClass('slide-right');
         $('.header').removeClass('slide-left');
     }
@@ -23,8 +23,8 @@ $(document).one('ready', function() {
 
 $(document).ready(function() {
 	        $(window).scroll(function(e) { 
-			    if($(window).scrollTop() >=900  &&   $('.header').hasClass('slide-right') ) {
-			       $(window).scrollTop(900);
+			    if($(window).scrollTop() >=750  &&   $('.header').hasClass('slide-right') ) {
+			       $(window).scrollTop(750);
 			    }
 			          	$(".project").each(function(idx, proj) {
 			          		var counter = idx+1;
@@ -69,7 +69,7 @@ $(document).ready(function() {
 	});
 //window resize
 	$(window).resize(function() {
-        if($(window).width() >= 900) {
+        if($(window).width() >= 750) {
             $('.header').addClass('slide-left');
             $('.header').removeClass('slide-right');
             $("#work").html('About');
