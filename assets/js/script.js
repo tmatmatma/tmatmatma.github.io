@@ -14,12 +14,12 @@ $.fn.isFullyInViewport = function() {
   return elementTop >= viewportTop && elementBottom <= viewportBottom;
 };
 
-$(document).one('ready', function() {
-	 if($(window).width() <= 750) {
-	    $('.header').addClass('slide-right');
-        $('.header').removeClass('slide-left');
-    }
-});
+// $(document).one('ready', function() {
+// 	 if($(window).width() <= 750) {
+// 	    $('.header').addClass('slide-right');
+//         $('.header').removeClass('slide-left');
+//     }
+// });
 
 $(document).ready(function() {
 	        $(window).scroll(function(e) { 
