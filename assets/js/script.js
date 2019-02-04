@@ -74,13 +74,13 @@ $(document).ready(function() {
 	});
 
 //conf vid load
-	$('#proj-17 > .main-img').on('click', function() {
-		var endConfImg = $('#proj-17 > .main-img').css('background-image');
-		 if (endConfImg.indexOf("img10.jpg") >=0) {
-		 	$('#proj-17').prepend('<div class="single-mov" id="vid"><video style="width: 100%; height: auto; margin:0;" class="kewlvid" autoplay="" playsinline="" loop="" muted="" src="assets/img/proj-17/human-signage480p.mov"></video></div>');
- 		 	$('.main-img').remove();
- 		 }
-	});
+	// $('#proj-17 > .main-img').on('click', function() {
+	// 	var endConfImg = $('#proj-17 > .main-img').css('background-image');
+	// 	 if (endConfImg.indexOf("img10.jpg") >=0) {
+	// 	 	$('#proj-17').prepend('<div class="single-mov" id="vid"><video style="width: 100%; height: auto; margin:0;" class="kewlvid" autoplay="" playsinline="" loop="" muted="" src="assets/img/proj-17/human-signage480p.mov"></video></div>');
+ // 		 	//$('.main-img').remove();
+ // 		 }
+	// });
 //window resize
 	$(window).resize(function() {
         if($(window).width() >= 750) {
