@@ -22,9 +22,23 @@ $.fn.isFullyInViewport = function() {
 // });
 
 $(document).ready(function() {
+
+	 if ($(".header").hasClass('slide-left')) {
+        $("#work").html('About');
+        $("p:contains('About')").append('<br>⇽');
+        $(".header").css({'background' : 'transparent', 'pointer-events':'none'});
+        $("#facts").css('display','none');
+      } else {
+        $("#work").html('Work');
+        $("p:contains('Work')").append('<br>⇾');
+        $(".header").css({'background' : 'white', 'pointer-events':'all'});
+        $("#facts").css('display','inline');
+        
+      } 
 	        $(window).scroll(function(e) { 
 			    if($(window).scrollTop() >=750  &&   $('.header').hasClass('slide-right') ) {
 			       $(window).scrollTop(750);
+
 			    }
 			          	$(".project").each(function(idx, proj) {
 			          		var counter = idx+1;
@@ -76,7 +90,7 @@ $(document).ready(function() {
             $("p:contains('About')").append('<br>⇽');
 
         } else {
-            $("#work").html('Work');
+            //$("#work").html('Work');
             $("p:contains('Work')").append('<br>⇾');
         }
     }).resize(); 
@@ -142,6 +156,8 @@ $(document).ready(function() {
         
       } 
 	});
+
+
 
 
 //open all links in new tab
