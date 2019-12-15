@@ -22,24 +22,29 @@ $.fn.isFullyInViewport = function() {
 // });
 
 $(document).ready(function() {
+	$.each($('.project'), function(ind) {
+	   $(this).attr('id', 'proj-' + parseInt(ind + 1));
+	});
+
+
 
 	 if ($(".header").hasClass('slide-left')) {
         $("#work").html('About');
-        $("p:contains('About')").append('<br>⇽');
         $(".header").css({'background' : 'transparent', 'pointer-events':'none'});
         $("#facts").css('display','none');
+        $("body").removeClass('info');
       } else {
-        $("#work").html('Work');
-        $("p:contains('Work')").append('<br>⇾');
+        $("#work").html('Close ⤬');
         $(".header").css({'background' : 'white', 'pointer-events':'all'});
         $("#facts").css('display','inline');
+        $("body").addClass('info');
         
       } 
 	        $(window).scroll(function(e) { 
-			    if($(window).scrollTop() >=750  &&   $('.header').hasClass('slide-right') ) {
-			       $(window).scrollTop(750);
+			    //if($(window).scrollTop() >=750  &&   $('.header').hasClass('slide-right') ) {
+			       //$(window).scrollTop(750);
 
-			    }
+			    //}
 			          	$(".project").each(function(idx, proj) {
 			          		var counter = idx+1;
 			          		var getEachProj = $(proj).attr('id', 'proj-'+counter);
@@ -73,29 +78,21 @@ $(document).ready(function() {
 	    }
 	});
 
-//conf vid load
-	// $('#proj-17 > .main-img').on('click', function() {
-	// 	var endConfImg = $('#proj-17 > .main-img').css('background-image');
-	// 	 if (endConfImg.indexOf("img10.jpg") >=0) {
-	// 	 	$('#proj-17').prepend('<div class="single-mov" id="vid"><video style="width: 100%; height: auto; margin:0;" class="kewlvid" autoplay="" playsinline="" loop="" muted="" src="assets/img/proj-17/human-signage480p.mov"></video></div>');
- // 		 	//$('.main-img').remove();
- // 		 }
-	// });
 //window resize
 	$(window).resize(function() {
         if($(window).width() >= 750) {
             $('.header').addClass('slide-left');
             $('.header').removeClass('slide-right');
             $("#work").html('About');
-            $("p:contains('About')").append('<br>⇽');
+            //$("p:contains('About')").append('<br>⇽');
 
         } else {
             //$("#work").html('Work');
-            $("p:contains('Work')").append('<br>⇾');
+            $("p:contains('Close ⤬')").append('<br>⇾');
         }
     }).resize(); 
 		
-//fool's navigator
+//navigator
 	$(".main-img").each(function() {
 		$(this).css('background-image', 'url(' + 'assets/img/' + $(this).parent('div').attr('id') + '/img1.jpg' + ')');
 	});
@@ -131,7 +128,7 @@ $(document).ready(function() {
 
 //yahoo
 	$("#yahoo").on('click', function() {
-		$("#proj-2 > .main-img").css( "background-image", 'url(' + 'assets/img/proj-2/img2.jpg' + ')' );
+		$(".covers > .main-img").css( "background-image", 'url(' + 'assets/img/proj-3/img2.jpg' + ')' );
 	});
 
 //nav card
@@ -145,14 +142,14 @@ $(document).ready(function() {
  
      if ($(".header").hasClass('slide-left')) {
         $("#work").html('About');
-        $("p:contains('About')").append('<br>⇽');
         $(".header").css({'background' : 'transparent', 'pointer-events':'none'});
         $("#facts").css('display','none');
+        $("body").removeClass('info');
       } else {
-        $("#work").html('Work');
-        $("p:contains('Work')").append('<br>⇾');
+        $("#work").html('Close ⤬');
         $(".header").css({'background' : 'white', 'pointer-events':'all'});
         $("#facts").css('display','inline');
+        $("body").addClass('info');
         
       } 
 	});

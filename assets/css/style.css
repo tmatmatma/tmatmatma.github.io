@@ -8,9 +8,10 @@ body {
 	font-family:"Times New Roman", Times, Serif;
 	font-weight:normal;
 	font-size:20px;
+	-webkit-tap-highlight-color: transparent;
+	height: auto;
+	overflow: auto;
 }
-
-
 
 a {
 	color: blue !important;
@@ -46,6 +47,21 @@ a:visited{
   	max-width:90%;
 }
 
+.embedmovie {
+	position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.embedmovie iframe {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100%;
+    border: 0;
+}
+
 .show {
 	opacity:1;
 	max-height:500px;
@@ -59,10 +75,10 @@ img {
 
 
 .initiate-treat {
-	animation: blinkers .5s infinite;
-	-webkit-animation: blinkers .5s infinite; 
-	-moz-animation:    blinkers .5s infinite; 
-	-o-animation:      blinkers .5s infinite; 
+	animation: blinkers 1s infinite;
+	-webkit-animation: blinkers 1s infinite; 
+	-moz-animation:    blinkers 1s infinite; 
+	-o-animation:      blinkers 1s infinite; 
 
 }
 
@@ -125,7 +141,6 @@ ul.dashed > li::before {
 }
 
 #work {
-	padding-bottom:20px;
 	text-align:right;
 	color:black;
 }
@@ -143,8 +158,7 @@ ul.dashed > li::before {
 #card {
 	position:relative;
 	text-align:left;
-	width:95%;
-	padding-bottom:20px;
+	padding: 40px 0 20px 0;
 	pointer-events:all;
 	cursor:pointer;
 }
@@ -153,25 +167,16 @@ ul.dashed > li::before {
 	padding-top:20px;
 }
 
-.container {
-	width: 100%;
-	display:flex;
-	flex-direction: row;
-	position:relative;
-	top:0;
-	left:0;
-	margin:10px;
+.container, .header {
+    width: calc(100% - 40px);
+    position: relative; 
+    margin: 0 auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .header {
-	margin:0;
-	position:absolute;
-	width:100%;
 	background:#fff;
 	z-index:3;
-	top:0;
-	left:0;
-	height:350vh;
 }
 
 .header p {
@@ -180,19 +185,17 @@ ul.dashed > li::before {
 }
 
 .slide-left {
-    left: -81vw;
-    transition: left .3s ease;
+    //left: -81vw;
+    //transition: left .3s ease;
 }
 
 .slide-right{
-    	left: 0;
-    	transition: left .3s ease;
+    //left: 0;
+    //transition: left .3s ease;
 }
 
 #projects {
-	width:95%;
-	padding-left:0;
-	margin:0;
+	margin: 0 auto;
 	padding-top: 50px;
 }
 
@@ -235,13 +238,13 @@ ul.dashed > li::before {
 
 
 #vert {
-	min-height:70vh;
-	height:auto;
+	min-height: 70vh;
+	height: auto;
 }
 
 #horz{
-	min-height:300px;
-	width:100%;
+	min-height: 300px;
+	width: 100%;
 }
 
 #vid {
@@ -279,15 +282,6 @@ ul.dashed > li::before {
 	pointer-events:none;
 }
 
-.img-active:after {
-	position: relative;
-	right:5px;
-	content:'⇾';
-/*	font-size:50px;*/
-	color:black;
-	animation: goforward .5s infinite;
-}
-
 
 @keyframes goforward {
 	0% { right:5px; }
@@ -306,16 +300,49 @@ video {
 	bottom:0;
 }
 
+.img-active {
+	text-align: right;
+}
+
+.img-active:after {
+	position: relative;
+	right: 5px;
+	content:'Tap ⇢';
+	color: black;
+	font-size: 15px;
+	animation: goforward .5s infinite;
+}
+
+
 
 
 @media screen and (min-width: 720px) {
-
 		body {
 			font-size:30px;
 		}
 
+		body.info {
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		#work {
+			padding-top:20px;
+			text-align:left;
+		}
+
+		.img-active:after {
+			content:'Click ⇢';
+			font-size: 25px;
+			animation: goforward .5s infinite;
+		}
+
 		.header {
-			height:300vh;
+			position: fixed;
+			//height:300vh;
+			height: 100vh;
+			width: 100%;
+			overflow-y: scroll;
 		}
 
 		.footnote-sup{
@@ -328,6 +355,10 @@ video {
 			font-size:15px;
 		}
 
+		.project {
+			padding-bottom: 40px;
+		}
+
 
 		.desc p {
 		 	margin: 0;
@@ -335,8 +366,8 @@ video {
 		}
 
 		#horz{
-			min-height:50vh;
-			width:95%;
+			//min-height:50vh;
+			//width:95%;
 		}
 
 		#vid {
@@ -356,7 +387,8 @@ video {
 		
 
 		#projects {
-			padding-left:25%;
+			width:75%;
+			padding-left: 25%;
 
 		}
 
@@ -369,7 +401,7 @@ video {
 
 		ul.dashed {
 			max-width:70vw;
-    		padding-top: 72px;
+    		padding: 50px 0 0 20px;
 		}
 
 
@@ -389,8 +421,13 @@ video {
 		}
 
 		.slide-left {
-    	left: -77vw;
+    	    transform: translateX(-75%);
+    	    transition: transform .75s ease;
     	}
+    	.slide-right{
+		    transform: translateX(0%);
+		    transition: transform .75s ease;
+		}
 
 }
 
@@ -402,7 +439,11 @@ video {
 		}
 
 		#horz{
-			min-height:80vh;
+			min-height:60vh;
+		}
+
+		.project {
+			padding-bottom: 80px;
 		}
 
 
