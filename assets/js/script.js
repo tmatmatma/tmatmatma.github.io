@@ -88,7 +88,7 @@ $(document).ready(function() {
 
         } else {
             //$("#work").html('Work');
-            $("p:contains('Close ⤬')").append('<br>⇾');
+            //$("p:contains('Close ⤬')").append('<br>⇾');
         }
     }).resize(); 
 		
