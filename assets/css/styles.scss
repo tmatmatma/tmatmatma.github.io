@@ -439,6 +439,16 @@ body {
 
 //custom
 
+
+
+#faq {
+	@media screen and (min-width: 720px) {
+		-ms-grid-column: 3;
+		-ms-grid-column-span: 86;
+		grid-column: 3 / 9;
+	}	
+}
+
 #genx {
 	position: relative;
 	z-index: 3;
@@ -447,7 +457,6 @@ body {
 		opacity: .9;
 		pointer-events: none;
 		position: absolute;
-		z-index: 4;
 		object-fit: contain;
 		img {
 			width: 100%;
@@ -458,6 +467,7 @@ body {
 			height: 200px;
 			top: -20%;
 			left: -15%;
+			z-index: 5;
 			transform: rotate(-4deg);
 		}
 
@@ -467,6 +477,7 @@ body {
 			top: -5%;
 			right: 3%;
 			transform: rotate(9deg);
+			z-index: 4;
 		}
 
 		&.three {
@@ -474,9 +485,18 @@ body {
 			height: 200px;
 			top: 3%;
 			right: -5%;
-			z-index: 5;
+			z-index: 6;
 			transform: rotate(15deg);
 		}
+	}
+}
+
+#louboutin {
+	@media screen and (min-width: 720px) {
+		margin: 12rem 0 0 0;
+	}
+	@media screen and (min-width: 1250px) {
+		margin: 16rem 0 0 0;
 	}
 }
 
@@ -608,9 +628,9 @@ body {
 
 #roadtrip {
 	@media screen and (min-width: 720px) {
-		-ms-grid-column: 8;
-		-ms-grid-column-span: 5;
-		grid-column: 8 / 13;
+		-ms-grid-column: 3;
+		-ms-grid-column-span: 4;
+		grid-column: 3 / 7;
 	}
 }
 
