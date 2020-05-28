@@ -407,9 +407,13 @@ body {
 
 			}
 			@media screen and (min-width: 720px) {
-				margin: 0 0 10rem 0;
+				margin: 0 0 4rem 0;
 				padding: 0;
 				border-bottom: 1px solid transparent;
+			}
+
+			@media screen and (min-width: 1250px) {
+				margin: 0 0 6rem 0;
 			}
 
 			.slideroverlay {
@@ -493,10 +497,10 @@ body {
 
 #louboutin {
 	@media screen and (min-width: 720px) {
-		margin: 12rem 0 0 0;
+		margin: 12rem 0 4rem 0;
 	}
 	@media screen and (min-width: 1250px) {
-		margin: 16rem 0 0 0;
+		margin: 16rem 0 6rem 0;
 	}
 }
 
