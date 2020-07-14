@@ -759,6 +759,30 @@ body {
 
 }
 
+#powermove {
+	@media screen and (min-width: 720px) {
+		-ms-grid-column: 1;
+		-ms-grid-column-span: 12;
+		grid-column: 1 / 13;
+	}
+
+	ul {
+
+		li {
+			width: 500px;
+			@media screen and (min-width: 720px) {
+				width: 700px;
+			}
+			@media screen and (min-width: 1250px) {
+				width: 800px;
+			}
+		}
+
+	}
+	
+
+}
+
 #roadtrip {
 	@media screen and (min-width: 720px) {
 		-ms-grid-column: 3;

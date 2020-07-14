@@ -644,6 +644,27 @@ body {
 }
 
 @media screen and (min-width: 720px) {
+  #powermove {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/13;
+  }
+}
+#powermove ul li {
+  width: 500px;
+}
+@media screen and (min-width: 720px) {
+  #powermove ul li {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  #powermove ul li {
+    width: 800px;
+  }
+}
+
+@media screen and (min-width: 720px) {
   #roadtrip {
     -ms-grid-column: 3;
     -ms-grid-column-span: 4;
