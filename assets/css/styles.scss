@@ -43,6 +43,7 @@ body {
     	
     	&:hover {
     		border-bottom: 1px solid blue;
+    		cursor: pointer;
     	}
 
     	&:visted {
@@ -225,10 +226,12 @@ body {
 			z-index: 1;
 			padding: 0 0 3rem 0;
 			height: 100px;
+			text-align: right;
 			
 
 
 			@media screen and (min-width: 720px) {
+			text-align: left;
 				
 				position: sticky;
 					-ms-grid-column: 1;
@@ -249,6 +252,7 @@ body {
 
 				&:hover {
 					color: blue;
+					cursor: pointer;
 				}
 			}
 		}
@@ -275,7 +279,11 @@ body {
 			background: white;
 			z-index: 2;
 			//position: relative;
+			&.introlinks {
+				border-bottom: 1px solid transparent;
+			}
 
+			
 			&:last-of-type {
 				border-bottom: 1px solid white;
 			}
@@ -450,6 +458,26 @@ body {
 
 //custom
 
+#morestuff, 
+#newstuff {
+	.entry {
+		padding: 20px 0 20px 0;
+		border-bottom: 1px solid black;
+		margin: 1rem 0 1rem 0;
+
+		.desc {
+			p {
+				text-indent: 0px;
+
+				a {
+					cursor: pointer !important;
+				}
+			}
+		}
+
+	}
+}
+
 #morestuff {
 	.desc {
 		p {
@@ -478,17 +506,11 @@ body {
 	}
 
 	.remember {
-	    width: 100%;
+	    width: 200px;
 	    height: 200px;
 	    background: url(../img/morestuff/silver-coin.gif);
-	    background-size: 100%;
+	    background-size: contain;
 	    background-repeat: no-repeat;
-	    background-position: -88px;	
-	    @media screen and (min-width: 720px) {
-	    	background-size: 50%;
-	    	background-position: -26%;	
-
-	    }
 
 	}
 
@@ -499,13 +521,6 @@ body {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: left;
-
-	}
-
-	.entry {
-		padding: 20px 0 20px 0;
-		border-bottom: 1px solid black;
-		margin: 1rem 0 1rem 0;
 
 	}
 
@@ -682,9 +697,13 @@ body {
 
 
 #hannahs {
-	//order: 2;
 	.movie {
 		padding-top: 77%;
+	}
+	@media screen and (min-width: 720px) {
+		-ms-grid-column: 7;
+		-ms-grid-column-span: 6;
+		grid-column: 7 / 13;
 	}
 }
 
