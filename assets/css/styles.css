@@ -382,7 +382,7 @@ body {
       background-position: left; }
 
 @media screen and (min-width: 720px) {
-  #faq {
+  #faq, #voterfraud {
     -ms-grid-column: 3;
     -ms-grid-column-span: 86;
     grid-column: 3 / 9; } }
