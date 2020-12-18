@@ -420,11 +420,11 @@ body {
       transform: rotate(15deg); }
 
 @media screen and (min-width: 720px) {
-  #louboutin {
-    margin: 12rem 0 4rem 0; } }
+  #louboutin, #voterfraud {
+    margin: 6vw 0 4vw 0; } }
 @media screen and (min-width: 1250px) {
-  #louboutin {
-    margin: 16rem 0 6rem 0; } }
+  #louboutin, #voterfraud {
+    margin: 8vw 0 4vw 0; } }
 
 #louboutin .movie, #y2k .movie {
   padding-top: 178%; }
@@ -437,7 +437,7 @@ body {
     -ms-grid-column-span: 8;
     grid-column: 5 / 13; } }
 @media screen and (min-width: 720px) {
-  #illos .womyn {
+  #illos .vertz {
     width: 600px; } }
 
 #businessweekcovers .slider ul li {
@@ -456,10 +456,10 @@ body {
     -ms-grid-column-span: 10;
     grid-column: 3 / 13; } }
 
-#hannahs .movie {
+#hannahs .movie, #distractor .movie {
   padding-top: 77%; }
 @media screen and (min-width: 720px) {
-  #hannahs {
+  #hannahs, #distractor {
     -ms-grid-column: 7;
     -ms-grid-column-span: 6;
     grid-column: 7 / 13; } }
@@ -477,6 +477,10 @@ body {
   @media screen and (min-width: 1250px) {
     #disposable .slider li {
       width: 800px; } }
+
+@media screen and (min-width: 720px) {
+  #distractor .movie {
+    padding-top: 99%; } }
 
 @media screen and (min-width: 720px) {
   #meditation {
