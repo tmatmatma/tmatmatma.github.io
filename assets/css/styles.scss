@@ -28,7 +28,7 @@ body {
 	box-sizing: border-box;
 
 	ul {
-		list-style-type: none; 
+		list-style-type: none;
 		margin: 0;
 		padding: 0;
 	}
@@ -40,7 +40,7 @@ body {
     a {
     	color: blue;
     	text-decoration: none;
-    	
+
     	&:hover {
     		border-bottom: 1px solid blue;
     		cursor: pointer;
@@ -55,7 +55,7 @@ body {
 }
 
 
-//---type 
+//---type
 
 body {
 	font-family: 'juni', times new roman;
@@ -90,7 +90,7 @@ body {
 
 			.desc{
 				p {
-					text-indent: 3rem;	
+					text-indent: 3rem;
 					max-width: 700px;
 					text-align: left;
 					margin-left: 0;
@@ -138,7 +138,7 @@ body {
 			}
 
 			ul.dashed > li {
-			margin-left: 30px;  
+			margin-left: 30px;
 			}
 
 			ul.dashed > li::before {
@@ -148,7 +148,7 @@ body {
 
 		}
 
-		
+
 
 		#close {
 			width: 100%;
@@ -227,12 +227,12 @@ body {
 			padding: 0 0 3rem 0;
 			height: 100px;
 			text-align: right;
-			
+
 
 
 			@media screen and (min-width: 720px) {
 			text-align: left;
-				
+
 				position: sticky;
 					-ms-grid-column: 1;
 					-ms-grid-column-span: 2;
@@ -283,11 +283,11 @@ body {
 				border-bottom: 1px solid transparent;
 			}
 
-			
+
 			&:last-of-type {
 				border-bottom: 1px solid white;
 			}
-	
+
 
 			.still {
 				width: 100%;
@@ -337,10 +337,10 @@ body {
 
 							&.horz {
 								@media screen and (min-width: 720px) {
-									width: 600px;	
+									width: 600px;
 								}
 								@media screen and (min-width: 1550px) {
-									width: 800px;	
+									width: 800px;
 								}
 							}
 						}
@@ -350,7 +350,7 @@ body {
 
 							video {
 								width: 100%;
-								
+
 								object-fit: contain;
 							}
 						}
@@ -411,7 +411,7 @@ body {
 					content: "SWIPE ⇢";
 					font-size: 1rem;
 					bottom: 0;
-					right: 6%;					
+					right: 6%;
 				}
 
 				.hint {
@@ -458,7 +458,7 @@ body {
 
 //custom
 
-#morestuff, 
+#morestuff,
 #newstuff {
 	.entry {
 		padding: 20px 0 20px 0;
@@ -483,7 +483,7 @@ body {
 		p {
 			text-indent: 0;
 		}
-		
+
 	}
 	.odell {
 		width: 100%;
@@ -529,7 +529,7 @@ body {
 		max-width: 300px;
 		flex-direction: row;
 	}
-	.btn-simple { 
+	.btn-simple {
 		position: relative;
 	    width: 50%;
 	    height: 150px;
@@ -537,7 +537,7 @@ body {
 		position: absolute;
 		cursor: pointer;
 		background: rgba(0,0,0,0);
-		}  
+		}
 
 	    .clickarea {
 	        width: 60px;
@@ -552,13 +552,13 @@ body {
 	        background-repeat: no-repeat;
 	        background-position: left;
 	        &.on {
-	            background: url('../img/buttons/simple-white-3.png'); 
+	            background: url('../img/buttons/simple-white-3.png');
 	            background-size: contain;
 	            background-repeat: no-repeat;
 	                background-position: left;
 	        }
 	        &.pressed {
-				background: url('../img/buttons/simple-white-2.png'); 
+				background: url('../img/buttons/simple-white-2.png');
 				background-size: contain;
 				background-repeat: no-repeat;
 				background-position: left;
@@ -569,21 +569,21 @@ body {
 	        background-size: contain;
 	        background-repeat: no-repeat;
 	            background-position: left;
-	        
+
 	        &.on {
-	            background: url('../img/buttons/simple-orange-3.png'); 
+	            background: url('../img/buttons/simple-orange-3.png');
 	            background-size: contain;
 	            background-repeat: no-repeat;
 	                background-position: left;
 	        }
 	        &.pressed {
-	            background: url('../img/buttons/simple-orange-2.png'); 
+	            background: url('../img/buttons/simple-orange-2.png');
 	            background-size: contain;
 	            background-repeat: no-repeat;
 	            background-position: left;
 	        }
 	    }
-    }    
+    }
 
 }
 
@@ -594,7 +594,7 @@ body {
 		-ms-grid-column: 3;
 		-ms-grid-column-span: 86;
 		grid-column: 3 / 9;
-	}	
+	}
 }
 
 #genx {
@@ -681,7 +681,7 @@ body {
 				}
 			}
 		}
-	}	
+	}
 	@media screen and (min-width: 720px) {
 		-ms-grid-column: 1;
 		-ms-grid-column-span: 12;
@@ -725,7 +725,7 @@ body {
 
 		}
 	}
-	
+
 }
 
 #distractor {
@@ -748,7 +748,7 @@ body {
 	}
 }
 
-#howto {
+#howto, #homercatalog {
 	@media screen and (min-width: 720px) {
 		-ms-grid-column: 1;
 		-ms-grid-column-span: 12;
@@ -775,15 +775,24 @@ body {
 				}
 
 				@media screen and (min-width: 1250px) {
-					width: 408px;
+					width: 407px;
+          transform: translateY(0px);
 				}
 
 			}
 		}
 
 	}
-	
 
+
+}
+
+#dreamchairs {
+  ul {
+    li {
+      padding: 0 0 0 0;
+    }
+  }
 }
 
 #powermove {
@@ -806,7 +815,7 @@ body {
 		}
 
 	}
-	
+
 
 }
 
@@ -823,6 +832,3 @@ body {
 		transform: translateX(-4%);
 	}
 }
-
-
-

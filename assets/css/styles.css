@@ -491,27 +491,31 @@ body {
   padding-top: 99%; }
 
 @media screen and (min-width: 720px) {
-  #howto {
+  #howto, #homercatalog {
     -ms-grid-column: 1;
     -ms-grid-column-span: 12;
     grid-column: 1 / 13; } }
-#howto ul li {
+#howto ul li, #homercatalog ul li {
   width: 500px; }
   @media screen and (min-width: 720px) {
-    #howto ul li {
+    #howto ul li, #homercatalog ul li {
       width: 700px; } }
   @media screen and (min-width: 1250px) {
-    #howto ul li {
+    #howto ul li, #homercatalog ul li {
       width: 800px; } }
-  #howto ul li:first-of-type {
+  #howto ul li:first-of-type, #homercatalog ul li:first-of-type {
     width: 260px;
     transform: translateY(10px); }
     @media screen and (min-width: 720px) {
-      #howto ul li:first-of-type {
+      #howto ul li:first-of-type, #homercatalog ul li:first-of-type {
         width: 357px; } }
     @media screen and (min-width: 1250px) {
-      #howto ul li:first-of-type {
-        width: 408px; } }
+      #howto ul li:first-of-type, #homercatalog ul li:first-of-type {
+        width: 407px;
+        transform: translateY(0px); } }
+
+#dreamchairs ul li {
+  padding: 0 0 0 0; }
 
 @media screen and (min-width: 720px) {
   #powermove {
